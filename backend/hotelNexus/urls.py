@@ -29,7 +29,7 @@ urlpatterns = [
     path('core/client/all',
         views.get_clients),  
     path('core/admin',
-        views.adminView.as_view(), name='admin'),
+        views.admin_view.as_view(), name='admin'),
     path('core/recepcionista',
         views.recepcionistaView.as_view(), name='recep'),
     path('core/client/rooms',
