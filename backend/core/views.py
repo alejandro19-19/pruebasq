@@ -7,8 +7,9 @@ from rest_framework.response import Response
 from core.serializers import UserSerializer, ClientSerializer, HabitacionSerializer, AdminClientSerializer, StaffSerializer, AssignRoomSerializer, ClientRoomSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.decorators import api_view, require_http_methods
+from rest_framework.decorators import api_view
 from rest_framework.settings import api_settings
+from django.views.decorators.http import require_http_methods
 from rest_framework.decorators import permission_classes, authentication_classes
 from django.template import loader
 from .models import Administrador, User, Cliente, Habitacion, Recepcionista
