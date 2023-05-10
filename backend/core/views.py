@@ -68,7 +68,7 @@ class clientView(APIView):
             return Response({"error": True, "informacion": "Los datos enviados no son correctos" }, status=status.HTTP_400_BAD_REQUEST)
 
 # Clase para funciones del administrador        
-class adminView(APIView):
+class admin_view(APIView):
     permission_classes = [IsAuthenticated]
     # Metodo para que un administrador obtenga su informacion
     def get(self, request):
@@ -110,7 +110,7 @@ class recepcionistaView(APIView):
         return Response({"Info_user": serializer.data} , status=status.HTTP_200_OK)
 
 # Metodo para que un administrador obtenga la informacion de todos los clientes existentes
-@api_view(['GET'])
+@api_view(['GET',])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def get_clients(request):
@@ -124,7 +124,7 @@ def get_clients(request):
         return Response({"error": True, "informacion": "El usuario no es parte del staff" }, status=status.HTTP_401_UNAUTHORIZED)
     
 # Metodo para que un administrador obtenga la informacion de todas las habitaciones disponibles 
-@api_view(['GET'])
+@api_view(['GET',])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def get_free_rooms(request):
@@ -139,7 +139,7 @@ def get_free_rooms(request):
     
 # Metodo para que un administrador obtenga la informacion de todas las habitaciones ocupadas
 
-@api_view(['GET'])
+@api_view(['GET',])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def get_occupied_rooms(request):
