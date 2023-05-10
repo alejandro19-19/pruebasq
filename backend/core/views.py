@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from core.serializers import UserSerializer, ClientSerializer, HabitacionSerializer, AdminClientSerializer, StaffSerializer, AssignRoomSerializer, ClientRoomSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, require_http_methods
 from rest_framework.settings import api_settings
 from rest_framework.decorators import permission_classes, authentication_classes
 from django.template import loader
@@ -110,7 +110,8 @@ class recepcionistaView(APIView):
         return Response({"Info_user": serializer.data} , status=status.HTTP_200_OK)
 
 # Metodo para que un administrador obtenga la informacion de todos los clientes existentes
-@api_view(['GET',])
+@api_view(['GET'])
+@require_http_methods(['GET'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def get_clients(request):
@@ -124,7 +125,8 @@ def get_clients(request):
         return Response({"error": True, "informacion": "El usuario no es parte del staff" }, status=status.HTTP_401_UNAUTHORIZED)
     
 # Metodo para que un administrador obtenga la informacion de todas las habitaciones disponibles 
-@api_view(['GET',])
+@api_view(['GET'])
+@require_http_methods(['GET'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def get_free_rooms(request):
@@ -139,7 +141,8 @@ def get_free_rooms(request):
     
 # Metodo para que un administrador obtenga la informacion de todas las habitaciones ocupadas
 
-@api_view(['GET',])
+@api_view(['GET'])
+@require_http_methods(['GET'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def get_occupied_rooms(request):
