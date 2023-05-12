@@ -48,6 +48,8 @@ jobs:
       with:
         name: coverage.xml
         path: coverage.xml
+    - run: |
+        ls
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
