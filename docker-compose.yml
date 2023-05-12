@@ -30,7 +30,7 @@ services:
       - "8000:8000"   
       
   bigstoredb:
-    image: postgres:12
+    image: alejandro1919/bigstoredb:latest
     restart: always
     environment: 
       DATABASE_HOST: ${POSTGRES_HOST}
@@ -43,7 +43,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   adminer:
-    image:  dpage/pgadmin4:6
+    image:  alejandro1919/pgadmin:latest
     environment:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
