@@ -61,6 +61,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   check_result_test:
     needs: testing
+    if: always()
     runs-on: ubuntu-latest
     steps:
     - name: Failed tests
@@ -80,7 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Failed coverage tests
-      if: ${{ failure() }}
+      if: ${{ needs.sonarcloud.result == 'failure' }}
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_CHANNEL: sonarqube
@@ -91,7 +92,7 @@ jobs:
         SLACK_USERNAME: Deploy Bot
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     - name: Successful coverage tests
-      if: ${{ success() }}
+      if: ${{ needs.sonarcloud.result == 'success' }}
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_CHANNEL: sonarqube
