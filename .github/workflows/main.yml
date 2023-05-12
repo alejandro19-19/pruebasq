@@ -51,6 +51,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: coverage.xml
+        path: coverage.xml
     - run: |
         ls
     - name: SonarCloud Scan
@@ -75,6 +76,7 @@ jobs:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
   check_result_sonar:
     needs: sonarcloud
+    if: always()
     runs-on: ubuntu-latest
     steps:
     - name: Failed coverage tests
