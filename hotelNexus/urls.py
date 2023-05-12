@@ -25,15 +25,15 @@ urlpatterns = [
     path('core/login',
         views.CreateTokenView.as_view(), name='login'),
     path('core/client',
-        views.clientView.as_view(), name='client'),
+        views.client_view.as_view(), name='client'),
     path('core/client/all',
-        views.get_clients),  
+        views.get_clients, name = 'clients'),  
     path('core/admin',
         views.admin_view.as_view(), name='admin'),
-    path('core/recepcionista',
-        views.recepcionistaView.as_view(), name='recep'),
+    path('core/receptionist',
+        views.receptionist_view.as_view(), name='recep'),
     path('core/client/rooms',
-         views.get_occupied_rooms),
+         views.get_occupied_rooms, name = 'Crooms'),
     path('core/rooms/free',
-         views.get_free_rooms)
+         views.get_free_rooms, name = 'rooms')
 ]   
