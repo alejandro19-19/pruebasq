@@ -12,7 +12,7 @@ services:
     ports:
       - "8085:80"
   mystore_ms:
-    alejandro1919/mystore_ms:latest
+    image: alejandro1919/mystore_ms:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
