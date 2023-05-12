@@ -48,41 +48,8 @@ jobs:
         coverage report
         coverage xml
         ls
-    - name: Failed tests
-      if: ${{ failure() }}
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: backend
-        SLACK_COLOR: "#9e2a2b"
-        #SLACK_ICON: https://someurl.com/logo.png
-        SLACK_MESSAGE: "backend test failed"
-        SLACK_TITLE: Failed execution
-        SLACK_USERNAME: Deploy Bot
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    - name: Failed coverage tests
-      if: ${{ failure() }}
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: sonarqube
-        SLACK_COLOR: "#9e2a2b"
-        #SLACK_ICON: https://someurl.com/logo.png
-        SLACK_MESSAGE: "failed coverage tests"
-        SLACK_TITLE: Failed execution
-        SLACK_USERNAME: Deploy Bot
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-    - name: Successful coverage tests
-      if: ${{ success() }}
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: sonarqube
-        SLACK_COLOR: "#52FF33"
-        #SLACK_ICON: https://someurl.com/logo.png
-        SLACK_MESSAGE: "successful coverage tests"
-        SLACK_TITLE: Successful execution
-        SLACK_USERNAME: Deploy Bot
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
