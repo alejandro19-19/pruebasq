@@ -1,0 +1,10 @@
+{
+    "home": "Home",
+    "welcome":"Welcome",
+    "sub_text": "Login with your email",
+    "email": "Email",
+    "password": "Password",
+    "login": "Sign in",
+    "question": "You do not have an account?",
+    "register": "Sign up"
+}

@@ -1,0 +1,12 @@
+{
+    "title": "Register",
+    "sub_title":"Complete the form",
+    "sub_text": "Personal information",
+    "name": "Name",
+    "last_name": "Last name",
+    "email": "Email",
+    "address": "Address",
+    "date": "Birthdate",
+    "password": "Password",
+    "register": "Create Account"
+}

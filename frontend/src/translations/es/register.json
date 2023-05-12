@@ -1,0 +1,13 @@
+{
+    "home": "Inicio",
+    "welcome":"Bienvenido",
+    "sub_text": "Por favor, registrate",
+    "name": "Nombre",
+    "last_name": "Apellidos",
+    "email": "Correo electronico",
+    "address": "Direccion de Residencia",
+    "password": "Contraseña",
+    "register": "Registrarse",
+    "question": "¿Ya tienes una cuenta?",
+    "login": "Iniciar sesion"
+}

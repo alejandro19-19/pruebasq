@@ -1,0 +1,12 @@
+{
+    "title": "Registro",
+    "sub_title":"Llene el formulario",
+    "sub_text": "Datos personales",
+    "name": "Nombre",
+    "last_name": "Apellidos",
+    "email": "Correo electronico",
+    "address": "Direccion de Residencia",
+    "date": "Cumpleaños",
+    "password": "Contraseña",
+    "register": "Crear cuenta"
+}

@@ -1,0 +1,56 @@
+.FaceRegister {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-image: url("../../assets/bg3.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+  
+    .home_faceRegister {
+      width: 50px;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      transition: .7s ease;
+  
+      &:hover {
+        transform: scale(110%);
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+    }
+  
+    .settings_faceRegister {
+      position: absolute;
+      top: 15px;
+      right: 0;
+    }
+  
+    .formulario {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+      background: rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(5px);
+  
+      p {
+        margin-bottom: 20px;
+        font-size: 25px;
+        font-weight: lighter;
+        color: wheat;
+      }
+    }
+  }

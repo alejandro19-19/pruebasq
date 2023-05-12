@@ -1,0 +1,10 @@
+{
+    "home": "Inicio",
+    "welcome":"Bienvenido",
+    "sub_text": "Ingresa con tu email",
+    "email": "Correo electronico",
+    "password": "Contraseña",
+    "login": "Iniciar sesion",
+    "question": "¿No tienes una cuenta?",
+    "register": "Registrate"
+}

@@ -1,0 +1,60 @@
+.Login {
+
+  position: relative;
+
+  .inicio {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s;
+    border-radius: 10px;
+
+    img {
+      width: 30px;
+      margin: 10px;
+    }
+
+    p {
+      font-size: medium;
+      color: white;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(255, 255, 255, .15);
+    }
+
+  }
+
+  img {
+    width: 60%;
+  }
+
+  .idioma {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:10px;
+    right:20px;
+  }
+
+  .cuenta {
+    span {
+      display: flex;
+      
+      .registrarme {
+        color: gray;
+        font-size: 500;
+        transition: .1s ease;
+        margin-left: 5px;
+    
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

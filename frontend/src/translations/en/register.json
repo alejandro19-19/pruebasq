@@ -1,0 +1,13 @@
+{
+    "home": "Home",
+    "welcome":"Welcome",
+    "sub_text": "Please ,register",
+    "name": "Name",
+    "last_name": "Last name",
+    "email": "Email",
+    "address": "Address",
+    "password": "Password",
+    "register": "Sign up",
+    "question": "Do you already have an account?",
+    "login": "Sign in"
+}
