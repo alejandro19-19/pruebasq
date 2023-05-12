@@ -2,6 +2,7 @@ version: "3"
 
 services:
   mystore_frontend:
+    image: alejandro1919/mystore_frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -11,6 +12,7 @@ services:
     ports:
       - "8085:80"
   mystore_ms:
+    alejandro1919/mystore_ms:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
