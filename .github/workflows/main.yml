@@ -22,12 +22,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: default deploy
-      run: |
-        aws configure
-      env:
-        aws-access-key-id: ${{ secrets.SECRET_AMAZON }}
-        aws-secret-access-key: ${{ secrets.ACCES_AMAZON }}
-        aws-region: ${{ secrets.REGION_AMAZON }}
-    - name: deploy to lambda
-      run: |
-        aws-lambda-deploy --function-name backend-dev --requirements requirements.txt --virtualenv venv
+      uses: appleboy/lambda-action@v0.1.9
+      with:
+        aws_access_key_id: ${{ secrets.ACCES_AMAZON }}
+        aws_secret_access_key: ${{ secrets.SECRET_AMAZON }}
+        aws_region: ${{ secrets.REGION_AMAZON }}
+        function_name: backend-dev
+        source: backend
