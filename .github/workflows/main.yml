@@ -8,6 +8,7 @@ on:
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_AMAZON }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.ACCES_AMAZON }}
+  AWS_DEFAULT_REGION: ${{ secrets.REGION_AMAZON }}
 jobs:
   testing:
     runs-on: ubuntu-latest
