@@ -22,10 +22,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: default deploy
-      uses: aws-actions/configure-aws-credentials@v1
+      run: |
+        aws configure
       with:
         aws-access-key-id: ${{ secrets.SECRET_AMAZON }}
         aws-secret-access-key: ${{ secrets.ACCES_AMAZON }}
         aws-region: ${{ secrets.REGION_AMAZON }}
-    - run: |
-        aws configure
