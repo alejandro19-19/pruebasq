@@ -24,7 +24,7 @@ jobs:
     - name: default deploy
       run: |
         aws configure
-      with:
+      env:
         aws-access-key-id: ${{ secrets.SECRET_AMAZON }}
         aws-secret-access-key: ${{ secrets.ACCES_AMAZON }}
         aws-region: ${{ secrets.REGION_AMAZON }}
