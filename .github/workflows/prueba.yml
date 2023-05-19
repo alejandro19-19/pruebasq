@@ -32,8 +32,10 @@ jobs:
 
     - name: Install dependencies
       if: steps.cache-pipenv.outputs.cache-hit != 'true'
-      run: pipenv install
-
+      run: | 
+        cd backend
+        python -m pip install --upgrade pip
+        pipenv install -r requirements.txt
     - name: Configure AWS profile
       run: |
         pipenv run aws configure set region us-east-1 --profile default
