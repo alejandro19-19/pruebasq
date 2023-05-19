@@ -5,6 +5,9 @@ on:
       - pruebaDeploy
   pull_request:
     types: [opened, synchronize, reopened]
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_AMAZON }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.ACCES_AMAZON }}
 jobs:
   testing:
     runs-on: ubuntu-latest
