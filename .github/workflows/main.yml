@@ -28,3 +28,6 @@ jobs:
         aws-access-key-id: ${{ secrets.SECRET_AMAZON }}
         aws-secret-access-key: ${{ secrets.ACCES_AMAZON }}
         aws-region: ${{ secrets.REGION_AMAZON }}
+    - name: deploy to lambda
+      run: |
+        aws-lambda-deploy --function-name backend-dev --requirements requirements.txt --virtualenv venv
