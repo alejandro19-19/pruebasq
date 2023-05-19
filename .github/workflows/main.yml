@@ -5,10 +5,6 @@ on:
       - pruebaDeploy
   pull_request:
     types: [opened, synchronize, reopened]
-env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_AMAZON }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.ACCES_AMAZON }}
-  AWS_DEFAULT_REGION: ${{ secrets.REGION_AMAZON }}
 jobs:
   testing:
     runs-on: ubuntu-latest
@@ -26,3 +22,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         aws configure
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_AMAZON }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.ACCES_AMAZON }}
+        AWS_DEFAULT_REGION: ${{ secrets.REGION_AMAZON }}
