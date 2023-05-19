@@ -179,3 +179,4 @@ def verify_room(request,serializer):
         room.save()
         serializer.save()
         return Response({"client":serializer.data}, status=status.HTTP_200_OK)
+    
