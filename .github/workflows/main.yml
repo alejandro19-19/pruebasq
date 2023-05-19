@@ -8,6 +8,10 @@ on:
 jobs:
   testing:
     runs-on: ubuntu-latest
+    env:
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_AMAZON }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.ACCES_AMAZON }}
+        AWS_DEFAULT_REGION: ${{ secrets.REGION_AMAZON }}
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -22,7 +26,3 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         aws configure
-      env:
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_AMAZON }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.ACCES_AMAZON }}
-        AWS_DEFAULT_REGION: ${{ secrets.REGION_AMAZON }}
