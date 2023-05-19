@@ -25,8 +25,8 @@ jobs:
     - name: default deploy
       uses: appleboy/lambda-action@v0.1.9
       with:
-        aws_access_key_id: ${{ secrets.ACCES_AMAZON }}
         aws_secret_access_key: ${{ secrets.SECRET_AMAZON }}
+        aws_access_key_id: ${{ secrets.ACCES_AMAZON }}
         aws_region: ${{ secrets.REGION_AMAZON }}
         function_name: backend-dev
         source: backend
