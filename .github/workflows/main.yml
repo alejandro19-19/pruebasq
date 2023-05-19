@@ -21,15 +21,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: zip
-      uses: montudor/action-zip@v0.1.0
-      with:
-        args: zip -qq -r ./bundle.zip ./
     - name: default deploy
-      uses: appleboy/lambda-action@master
-      with:
-        aws_access_key_id: ${{ secrets.SECRET_AMAZON }}
-        aws_secret_access_key: ${{ secrets.ACCES_AMAZON }}
-        aws_region: ${{ secrets.REGION_AMAZON }}
-        function_name: backend-dev
-        zip_file: bundle.zip
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.SECRET_AMAZON }}
+          aws-secret-access-key: ${{ secrets.ACCES_AMAZON }}
+          aws-region: ${{ secrets.REGION_AMAZON }}
+      - run: |
+          aws configure
