@@ -1,0 +1,16 @@
+on:
+  push:
+    paths:
+      - 'backend/**'
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.9
