@@ -59,7 +59,7 @@ contrasenha.send_keys(password)
 
 submit = web.find_element(By.XPATH,'//*[@id="post-object-form"]/form/fieldset/div[9]/button')
 submit.click()
-
+print("se creo el administrador")
 #loguearse con el admin
 
 #web.find_element(By.XPATH,'')
@@ -104,8 +104,10 @@ try:
     get_confirmation_user_create = web.find_element(By.XPATH,'//*[@id="root"]/div/div/div[2]')
     if not get_confirmation_user_create:
         raise AssertionError("El cliente no puede ver su perfil")
+    print("se creo el cliente")
 except NoSuchElementException:
     time.sleep(1)
+    
 #revisar si esto esta bien cuando el frontend arregle el codigo ---------------------------------------
 
 #time.sleep(20)
@@ -135,6 +137,7 @@ try:
     get_confirmation_login = web.find_element(By.XPATH,'//*[@id="root"]/div/div/div[4]/div[3]/form/div[3]/p')
     if "Invalid data, please try again" in get_confirmation_login.text:
         raise AssertionError("El cliente no puede logearse")
+    print("se logeo el cliente")
 except NoSuchElementException:
     time.sleep(5)
 
@@ -145,6 +148,7 @@ try:
     get_confirmation_profile = web.find_element(By.XPATH, '//*[@id="root"]/div/div/div[3]/h4')
     if not get_confirmation_profile:
         raise AssertionError("El cliente no puede ver su perfil")
+    print("el cliente puede revisar su perfil")
     time.sleep(1)
 except NoSuchElementException:
     time.sleep(1)
@@ -161,4 +165,5 @@ time.sleep(1)
 get_room = web.find_element(By.XPATH,'//*[@id="root"]/div/div/div[3]/button')
 get_room.click()
 
-time.sleep(6)
+print("se han terminado las pruebas con exito")
+time.sleep(1)
