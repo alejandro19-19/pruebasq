@@ -4,13 +4,24 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 #from selenium.webdriver.chrome.options import Options
 
+from selenium.webdriver.chrome.service import Service
+from chromedriver_py import binary_path # this will get you the path variable
+
+service_object = Service(binary_path)
+web = webdriver.Chrome(service=service_object)
+
+# deprecated but works in older selenium versions
+# driver = webdriver.Chrome(executable_path=binary_path)
+web.get('http://localhost:8000/core/create')
+assert "Python" in web.title
+
 #chrome_options = Options()
 #chrome_options.add_argument("--headless")
 #chrome_options.add_argument("--no-sandbox")
 #chrome_options.add_argument("--disable-dev-shm-usage")
 
 #web = webdriver.Chrome(options=chrome_options)
-web = webdriver.Chrome()
+#web = webdriver.Chrome()
 web.get('http://localhost:8000/core/create')
 
 #crear un admin
