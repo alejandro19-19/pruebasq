@@ -11,7 +11,7 @@ service_object = Service(binary_path)
 #web = webdriver.Chrome(service=service_object)
 
 # deprecated but works in older selenium versions
- web = webdriver.Chrome(executable_path=binary_path)
+web = webdriver.Chrome(executable_path=binary_path)
 web.get('http://localhost:8000/core/create')
 assert "Python" in web.title
 
