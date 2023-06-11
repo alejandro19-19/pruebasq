@@ -15,4 +15,4 @@ trio==0.22.0
 trio-websocket==0.10.2
 urllib3==2.0.2
 wsproto==1.2.0
-chromedriver-py==113
+chromedriver-py==113.0.5672.63
