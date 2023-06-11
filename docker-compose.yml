@@ -2,7 +2,7 @@ version: "3"
 
 services:
   mystore_frontend:
-    image: alejandro1919/mystore_frontend:latest
+    image: santa51107/mystore_frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -12,7 +12,7 @@ services:
     ports:
       - "8085:80"
   mystore_ms:
-    image: alejandro1919/mystore_ms:latest
+    image: santa51107/mystore_ms:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -30,7 +30,7 @@ services:
       - "8000:8000"   
       
   bigstoredb:
-    image: alejandro1919/bigstoredb:latest
+    image: postgres:12
     restart: always
     environment: 
       DATABASE_HOST: ${POSTGRES_HOST}
@@ -43,7 +43,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   adminer:
-    image:  alejandro1919/pgadmin:latest
+    image: dpage/pgadmin4:6
     environment:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
