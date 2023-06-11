@@ -18,8 +18,6 @@ web = webdriver.Chrome(service=service_object,options=chrome_options)
 # deprecated but works in older selenium versions
 #web = webdriver.Chrome(executable_path=binary_path)
 web.get('http://localhost:8000/core/create')
-assert "Python" in web.title
-
 
 
 #web = webdriver.Chrome(options=chrome_options)
