@@ -23,7 +23,7 @@ web.get('http://localhost:8000/core/create')
 #web = webdriver.Chrome(options=chrome_options)
 #web = webdriver.Chrome()
 web.get('http://localhost:8000/core/create')
-
+time.sleep(1)
 #crear un admin
 type = "Admin"
 tipo = web.find_element(By.XPATH,'//*[@id="post-object-form"]/form/fieldset/div[1]/div/input')
