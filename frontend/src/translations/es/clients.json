@@ -1,0 +1,10 @@
+{
+  "clients": "Clientes",
+  "description": "Administrar clientes",
+  "name": "Nombre",
+  "last_name": "Apellido",
+  "reservations": "Reservaciones",
+  "with_reservation": "Con reservación",
+  "without_reservation": "Sin reservación",
+  "action": "Acción"
+}

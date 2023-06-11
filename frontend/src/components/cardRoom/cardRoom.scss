@@ -1,0 +1,60 @@
+.CardRoom {
+  position: relative;
+  z-index: 0;
+  width: 170px;
+  height: 220px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(9, 7, 20);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease;
+
+  .bg_img {
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+    height: 80%;
+    left: 25px;
+    background-image: url("../../assets/Logo 2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 15%;
+  }
+
+  .text {
+    text-align: center;
+
+    p:nth-child(1) {
+      font-size: 20px;
+    }
+    p:nth-child(2) {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    p:nth-child(3) {
+      font-size: 20px;
+    }
+  }
+
+  button {
+    background: rgba(255, 255, 255, 0.336);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    transition: .3s ease;
+
+    &:hover {
+      background-color: rgba(24, 24, 46, 0.61);
+    }
+    
+  }
+
+  &:hover {
+    transform: scale(105%);
+  }
+}

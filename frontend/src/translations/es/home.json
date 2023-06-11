@@ -1,0 +1,18 @@
+{
+  "hi": "Hola",
+  "welcome": "Bienvenido al Hotel Nexus",
+  "profile": "Perfil",
+  "profile_description": "Gestiona tu información",
+  "reservations": "Reservaciones",
+  "reservations_description": "Reserva tu habitación",
+  "rooms": "Habitaciones",
+  "rooms_description": "Administra las habitaciones del hotel",
+  "registerRecep": "Registrar recepcionista",
+  "registerRecep_description": "Crea un nuevo recepcionista",
+  "clients": "Clientes",
+  "clients_description": "Administrar clientes",
+  "name": "Nombre",
+  "occupied": "Ocupada",
+  "yes": "Si",
+  "no": "No"
+}

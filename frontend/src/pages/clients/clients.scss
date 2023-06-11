@@ -1,0 +1,52 @@
+.Clients {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-image: url("../../assets/bg3.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+
+  .clients_home {
+    width: 50px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    transition: .7s ease;
+
+    &:hover {
+      transform: scale(110%);
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+  }
+
+  .see {
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(1, 1, 88, 0.479);
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.26);
+    }
+  }
+
+  .green {
+    padding: 8px;
+    border-radius: 10px;
+    border: solid green 1px;
+  }
+  
+  .red {
+    padding: 8px;
+    border-radius: 10px;
+    border: solid red 1px;
+  }
+}

@@ -1,0 +1,16 @@
+name: Trigger main repo
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  trigger_main_repository:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger Update
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        repository: santa51107HD/hotel-nexus
+        event-type: update-subtrees

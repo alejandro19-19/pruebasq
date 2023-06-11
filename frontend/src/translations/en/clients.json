@@ -1,0 +1,10 @@
+{
+  "clients": "Clients",
+  "description": "Manage clients",
+  "name": "Name",
+  "last_name": "Last name",
+  "reservations": "Reservations",
+  "with_reservation": "With reservation",
+  "without_reservation": "Without reservation",
+  "action": "Action"
+}

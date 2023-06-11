@@ -1,0 +1,134 @@
+.Rooms {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-image: url("../../assets/bg3.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+
+  .rooms_profile {
+    width: 50px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    transition: .7s ease;
+
+    &:hover {
+      transform: scale(110%);
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+  }
+
+  .settings_rooms {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
+
+  .register_room {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(34, 29, 58, 0.3);
+
+    h1 {
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .data {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      p {
+        margin: 5px;
+      }
+
+      input {
+        height: 25px;
+        width: 100px;
+        border-radius: 2px;
+        background-color: rgba(105, 102, 119, 0.2);
+        margin: 10px;
+      }
+
+      button {
+        background-color: white;
+        color: black;
+        padding: 4px;
+        border-radius: 3px;
+        transition: .5s ease;
+
+        &:hover {
+          color: white;
+          background-color: rgba(255, 255, 255, 0.3);
+          border: 1px solid rgba(4, 4, 87, 0.363);
+        }
+      }
+    }
+  }
+
+  .menu {
+    min-width: 250px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    // padding: 5px;
+    // border-radius: 10px 10px 0 0;
+    // background-color: rgba(34, 29, 58, 0.3);
+
+    button {
+      width: 130px;
+      margin: 15px;
+      padding: 5px;
+      background-color: rgba(34, 29, 58, 0.3);
+      border-radius: 10px;
+      transition: 0.4s ease;
+
+      &:hover {
+        // border: solid green 1px;
+        background-color: rgba(3, 100, 19, 0.3);
+      }
+    }
+
+    .occuped {
+      transform: scale(120%);
+      background-color: rgba(5, 168, 32, 0.3);
+      border: solid green 1px;
+    }
+
+    .free {
+      transform: scale(120%);
+      background-color: rgba(5, 168, 32, 0.3);
+      border: solid green 1px;
+    }
+  }
+
+  .cards {
+    max-width: 800px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(34, 29, 58, 0.3);
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

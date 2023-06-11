@@ -1,0 +1,14 @@
+{
+  "hi": "Hi",
+  "welcome": "Welcome to the Nexus Hotel",
+  "profile": "Profile",
+  "profile_description": "Manage your information",
+  "reservations": "Reservations",
+  "reservations_description": "Reserve your room",
+  "rooms": "Rooms",
+  "rooms_description": "Manage hotel rooms",
+  "registerRecep": "Receptionist Registration",
+  "registerRecep_description": "Create a new receptionist",
+  "clients": "Clients",
+  "clients_description": "Manage clients"
+}

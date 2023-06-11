@@ -1,0 +1,62 @@
+.ImageSlider {
+  width: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    .arrows {
+      display: flex;
+      width: 100%;
+      padding: 1%;
+      justify-content: space-between;
+      position: absolute;
+
+      img {
+        border-radius: 50%;
+        transition: all .2s ease;
+
+        &:nth-child(1) {
+          rotate: 180deg;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, .2);
+          cursor: pointer;
+          transform: scale(110%);
+        }
+      }
+    }
+
+    .btns {
+      margin-top: 10px;
+
+      button {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        background: rgba(255, 255, 255, .2);
+        border-radius: 50%;
+        transition: all .2s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, .5);
+          transform: scale(115%);
+        }
+      }
+    }
+  }
+}
