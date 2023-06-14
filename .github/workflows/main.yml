@@ -6,25 +6,19 @@ on:
       - pruebaSelenium
 
 jobs:
-  test:
-    name: testing
+  deploy-frontend:
+    name: Deploy Frontend
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          fetch-depth: 0   
-      - name: Set up Python 
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.9
-      - name: test
-        run: | 
-          cd backend
-          python -m pip install --upgrade pip
-          pip install -r requirements_func_test.txt
-          cd ..
-          docker-compose -f pruebasFuncionales.yml up -d
-          cd backend
-          cd core
-          cd func-tests
-          python pruebas_funcionales.py
+          aws-access-key-id: ${{ secrets.ACCES_AMAZON }}
+          aws-secret-access-key: ${{ secrets.SECRET_AMAZON }}
+          aws-region: us-east-1
+      - name: Install Amplify CLI
+        run: npm install -g @aws-amplify/cli
+      - name: Deploy to Amplify Console
+        run: amplify push --yes
