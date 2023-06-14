@@ -16,4 +16,4 @@ applications:
         paths:
           - node_modules/**/*
     appRoot: frontend
-    appId: <your-amplify-app-id>
+    appId: ${{ secrets.APPIDAMPLIFY }}
