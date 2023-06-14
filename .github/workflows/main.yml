@@ -22,3 +22,4 @@ jobs:
         run: npm install -g @aws-amplify/cli
       - name: Deploy to Amplify Console
         run: amplify publish --yes
+        working-directory: frontend
