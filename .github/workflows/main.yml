@@ -21,5 +21,7 @@ jobs:
       - name: Install Amplify CLI
         run: npm install -g @aws-amplify/cli
       - name: Deploy to Amplify Console
-        run: amplify publish --yes
-        working-directory: /
+        run: |
+          amplify pull --appId d3i2j3zmmfkcgd
+          amplify publish --yes
+              
